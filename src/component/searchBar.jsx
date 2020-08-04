@@ -41,7 +41,7 @@ function SearchBar(props) {
           onChange={(e) => handleFirstName(e.target.value)}
         />
       </FormControl>
-          &nbsp;&nbsp;
+          &nbsp;
       <FormControl>
         <TextField
           id="standard-basic"
@@ -50,7 +50,7 @@ function SearchBar(props) {
           onChange={(e) => handleLastName(e.target.value)}
         />
       </FormControl>
-          &nbsp;&nbsp;
+          &nbsp;
       <FormControl style={{ width: '100px' }}>
         <InputLabel id="demo-simple-select-label">Gender</InputLabel>
         <Select
@@ -63,9 +63,9 @@ function SearchBar(props) {
           <MenuItem value={'Female'}>Female</MenuItem>
         </Select>
       </FormControl>
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <Button variant="contained" color="primary" onClick={onSearch}>Search</Button>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;
       <Button variant="contained" onClick={handleReset}>Reset</Button>
     </div>
   )
