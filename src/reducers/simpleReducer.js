@@ -12,13 +12,35 @@ const dataList = [
   { firstName: 'Anita', lastName: 'Mui', gender: 'Female' }
 ]
 
-export default (state = { gender: '', dataList }, action) => {
+export default (state = {}, action) => {
+
   switch (action.type) {
-    case 'SIMPLE_ACTION':
+    case 'ON_SEARCH': {
+      const { firstName, lastName, gender, page } = action.payload
+      const result = dataList
+        .filter(item => {
+          if (
+            item.firstName.includes(firstName) &&
+            item.lastName.includes(lastName) &&
+            item.gender.includes(gender)
+          ) {
+            return true
+          }
+        })
+      const pageSize = Math.ceil(result.length / 5)
+      const startIndex = ((page > pageSize ? 1 : page) - 1) * 5
+
       return {
-        result: action.payload
+        ...state,
+        pageSize,
+        dataList: result.slice(startIndex, startIndex + 5)
       }
+    }
     default:
-      return state
+      return {
+        ...state,
+        pageSize: Math.ceil(dataList.length / 5),
+        dataList: dataList.slice(0, 5)
+      }
   }
 }
