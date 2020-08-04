@@ -32,7 +32,7 @@ function SearchBar(props) {
     }
   } = props
   return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
       <FormControl>
         <TextField
           id="standard-basic"

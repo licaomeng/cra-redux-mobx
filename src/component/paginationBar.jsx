@@ -22,7 +22,7 @@ export default function paginationBar(props) {
   }
 
   return (
-    <div style={{ padding: '0 300px' }}>
+    <div style={{ padding: '0 5%' }}>
       <Pagination
         onChange={(e, v) => handlePageChange(v)}
         count={pageSize}

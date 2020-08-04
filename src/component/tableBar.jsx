@@ -8,7 +8,7 @@ import TableRow from '@material-ui/core/TableRow';
 export default function tableBar(props) {
   const { dataList } = props
   return (
-    <div style={{ padding: '0 300px' }}>
+    <div style={{ padding: '0 5%' }}>
       <Table
         aria-label="simple table">
         <TableHead>
